@@ -1,5 +1,6 @@
-const express = require('express'),
+const express = require('express');
 const cors = require("cors");
+
 
 const app = express();
 
@@ -452,16 +453,16 @@ app.get("/", (req, res) => {
     });
   });
   
-  // Heroku va nous fournir une variable process.env.PORT
-  // if (process.env.PORT) {
-  //   app.listen(process.env.PORT, () => {
-  //     console.log("Server started");
-  //   });
-  // } else {
-  //   app.listen(3200, () => {
-  //     console.log("Server started");
-  //   });
-  // }
+//   Heroku va nous fournir une variable process.env.PORT
+//   if (process.env.PORT) {
+//     app.listen(process.env.PORT, () => {
+//       console.log("Server started");
+//     });
+//   } else {
+//     app.listen(3200, () => {
+//       console.log("Server started");
+//     });
+//   }
   
   app.listen(process.env.PORT || 3200, () => {
     console.log("Server started");
